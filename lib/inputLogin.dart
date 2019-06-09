@@ -95,3 +95,14 @@ class TextoUtil extends StatelessWidget {
     );
   }
 }
+
+class Imagem extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var assetsImage = new AssetImage('src/img.png');
+    var image = new Image(image: assetsImage, width: 120, height: 120);
+    return Container(
+      child: image,
+    );
+  }
+}
