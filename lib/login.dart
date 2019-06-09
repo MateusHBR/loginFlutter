@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0, bottom: 20),
                       child: buttonLogin(
-                        icon: null,
+                        height: 42,
                         textoBT: "Sign in !",
                         borderRadius: 30.0,
                         width: 321,
@@ -63,13 +63,14 @@ class _LoginState extends State<Login> {
                           Expanded(
                             child: Stack(children: <Widget>[
                               buttonLogin(
+                                height: 42,
                                 color: Colors.red,
                                 textoBT: "Google",
                                 borderRadius: 30.0,
                                 width: 142.5,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 30, top: 12),
+                                padding: const EdgeInsets.only(left: 30, top: 10),
                                 child: Icon(
                                   Icons.account_balance,
                                   color: Colors.white, 
@@ -81,12 +82,13 @@ class _LoginState extends State<Login> {
                             child: Stack(children: <Widget>[
                               buttonLogin(
                                 color: Colors.blue,
-                              textoBT: "Facebook",
-                              borderRadius: 30.0,
-                              width: 142.5,
+                                textoBT: "Facebook",
+                                borderRadius: 30.0,
+                                width: 142.5,
+                                height: 42,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 30, top: 12),
+                                padding: const EdgeInsets.only(left: 30, top: 10),
                                 child: Icon(
                                   Icons.account_balance,
                                   color: Colors.white, 

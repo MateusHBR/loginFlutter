@@ -14,19 +14,20 @@ class textField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 70,
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
       child: TextField(
         obscureText: obscureText,
-        decoration: InputDecoration(
+        decoration: InputDecoration(          
           border: OutlineInputBorder(),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30.0),
+            borderRadius: BorderRadius.circular(26.0),
             borderSide: BorderSide(
               color: Colors.purple,
             ),
           ),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30.0),
+              borderRadius: BorderRadius.circular(26.0),
               borderSide: BorderSide(color: Colors.purple[50])),
           fillColor: Colors.purple[100],
           filled: true,
@@ -36,7 +37,7 @@ class textField extends StatelessWidget {
           ),
           labelText: (hint),
           labelStyle: TextStyle(
-              fontSize: 18, color: Colors.purple, fontWeight: FontWeight.bold),
+              fontSize: 15, color: Colors.purple, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -47,6 +48,7 @@ class buttonLogin extends StatelessWidget {
   final String textoBT;
   final double borderRadius;
   final double width;
+  final double height;
   final IconData icon;
   final Color color;
   const buttonLogin(
@@ -55,7 +57,7 @@ class buttonLogin extends StatelessWidget {
       this.borderRadius = 0.0,
       this.width = 100,
       this.icon,
-      this.color = Colors.purple})
+      this.color = Colors.purple, this.height})
       : super(key: key);
 
   @override
@@ -63,6 +65,7 @@ class buttonLogin extends StatelessWidget {
     return Center(
       child: SizedBox(
         width: width,
+        height: height,
         child: RaisedButton(
           elevation: 3,
           color: color,
