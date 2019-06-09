@@ -41,6 +41,8 @@ class _LoginState extends State<Login> {
                     ),                         
                     buttonLogin(
                       textoBT: "Sign in",
+                      borderRadius: 30.0,
+                      width: 300,
                     ), 
                  
                 ],

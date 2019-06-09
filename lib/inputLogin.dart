@@ -45,28 +45,37 @@ class textField extends StatelessWidget {
 
 class buttonLogin extends StatelessWidget {
   final String textoBT;
+  final double borderRadius;
+  final double width;
 
-  const buttonLogin({Key key, this.textoBT = ""}) : super(key: key);
+  const buttonLogin({Key key, this.textoBT = "", this.borderRadius = 0.0, this.width = 100})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.only(top: 20),
-            child: RaisedButton(
-              color: Colors.purple,
-              child: Text(
-                textoBT,
-                textAlign: TextAlign.end,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold),
+            child: SizedBox(
+              width: width,
+              child: RaisedButton(
+                elevation: 3,
+                color: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(borderRadius),
+                ),
+                child: Text(
+                  textoBT,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {},
               ),
-              onPressed: () {},
             ),
           ),
         ],
