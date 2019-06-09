@@ -10,33 +10,41 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Login",
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: Colors.purple,
       ),
       home: Scaffold(
         body: Container(
-          color: Colors.white,
+          color: Colors.white12,
           height: double.infinity,
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[   
-                           
-                textField(
-                  hint: "Usuário",
-                  icon: Icons.account_box,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                ),
-                textField(
-                  hint: "Senha",
-                  icon: Icons.lock,
-                ),                
-                buttonLogin(
-                  textoBT: "Clique para Logar",
-                ),                
+            children: <Widget>[     
+              Column(
+                children: <Widget>[    
+                    Padding(
+                      padding: EdgeInsets.only(top: 150),
+                    ) ,                         
+                    textField(
+                      hint: "Username",
+                      icon: Icons.person,
+                    ),
+                    textField(
+                      obscureText: true,
+                      hint: "Password",
+                      icon: Icons.lock,
+                    ),     
+                    TextoUtil(
+                      textoUTIL: "Forgot password?"
+                    ),                         
+                    buttonLogin(
+                      textoBT: "Sign in",
+                    ), 
+                 
+                ],
+              ),
             ],
           ),
         ),
