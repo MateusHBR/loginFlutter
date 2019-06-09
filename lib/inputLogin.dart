@@ -19,17 +19,17 @@ class textField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           border: OutlineInputBorder(),
-          fillColor: Colors.purple[100],
-          filled: true,
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: BorderRadius.circular(30.0),
             borderSide: BorderSide(
               color: Colors.purple,
             ),
           ),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50.0),
+              borderRadius: BorderRadius.circular(30.0),
               borderSide: BorderSide(color: Colors.purple[50])),
+          fillColor: Colors.purple[100],
+          filled: true,
           prefixIcon: Icon(
             icon,
             color: Colors.purple,
@@ -50,31 +50,34 @@ class buttonLogin extends StatelessWidget {
   final IconData icon;
   final Color color;
   const buttonLogin(
-      {Key key, this.textoBT = "", this.borderRadius = 0.0, this.width = 100, this.icon, this.color = Colors.purple})
+      {Key key,
+      this.textoBT = "",
+      this.borderRadius = 0.0,
+      this.width = 100,
+      this.icon,
+      this.color = Colors.purple})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-          width: width,
-          child: RaisedButton(
-            elevation: 3,
-            color: color,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-            ),
-            child: Text(
-              textoBT,
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold),
-            ),
-            onPressed: () {},
+        width: width,
+        child: RaisedButton(
+          elevation: 3,
+          color: color,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
           ),
+          child: Text(
+            textoBT,
+            textAlign: TextAlign.end,
+            style: TextStyle(
+                color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
+          ),
+          onPressed: () {},
         ),
+      ),
     );
   }
 }
